@@ -26,3 +26,32 @@ const observer = new IntersectionObserver(entries => entries.forEach(entry => {
   }
 }), { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+const lightbox = document.querySelector('#lightbox');
+const lightboxImage = document.querySelector('#lightbox-image');
+const lightboxCaption = document.querySelector('#lightbox-caption');
+const closeLightbox = () => {
+  lightbox.hidden = true;
+  lightboxImage.src = '';
+  document.body.style.overflow = '';
+};
+document.querySelectorAll('.gallery-item').forEach(item => item.addEventListener('click', () => {
+  lightboxImage.src = item.dataset.full;
+  lightboxImage.alt = item.dataset.caption;
+  lightboxCaption.textContent = item.dataset.caption;
+  lightbox.hidden = false;
+  document.body.style.overflow = 'hidden';
+  document.querySelector('#lightbox-close').focus();
+}));
+document.querySelector('#lightbox-close').addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', event => { if (event.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', event => { if (event.key === 'Escape' && !lightbox.hidden) closeLightbox(); });
+
+document.querySelector('#message-form').addEventListener('submit', event => {
+  event.preventDefault();
+  const name = document.querySelector('#sender-name').value.trim();
+  const subject = document.querySelector('#message-subject').value;
+  const message = document.querySelector('#message-body').value.trim();
+  const text = `Hello Dr. Pritom Ghosh,\n\nName: ${name}\nSubject: ${subject}\n\n${message}\n\nSent from your medical portfolio.`;
+  window.open(`https://wa.me/8801715675352?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+});

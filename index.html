@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="photos.css">
+  <link rel="stylesheet" href="gallery.css">
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -20,7 +21,7 @@
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="Dr. Pritom Ghosh, home"><span class="brand-mark">PG</span><span>Dr. Pritom Ghosh<small>MBBS (DU)</small></span></a>
     <nav class="desktop-nav" aria-label="Primary navigation">
-      <a href="#about">About</a><a href="#experience">Experience</a><a href="#research">Research</a><a href="#credentials">Credentials</a>
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#research">Research</a><a href="#gallery">Gallery</a>
     </nav>
     <div class="header-actions">
       <button class="icon-btn" id="theme-toggle" aria-label="Switch color theme"><span aria-hidden="true">◐</span></button>
@@ -28,7 +29,7 @@
       <button class="menu-btn" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span><span></span></button>
     </div>
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-      <a href="#about">About</a><a href="#experience">Experience</a><a href="#research">Research</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a>
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#research">Research</a><a href="#credentials">Credentials</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
     </nav>
   </header>
 
@@ -101,17 +102,41 @@
       </div>
     </section>
 
+    <section class="section gallery-section" id="gallery">
+      <div class="section-label">05 · Curated visual gallery</div>
+      <div class="section-heading reveal"><h2>Moments from the journey.</h2><p>Clinical practice, collaborative learning, community research, and the study behind the findings.</p></div>
+      <div class="gallery-grid">
+        <button class="gallery-item gallery-tall reveal" data-full="assets/01-dr-pritom-ghosh-in-hospital-theatre-scrubs.jpg" data-caption="Dr. Pritom Ghosh in hospital theatre scrubs"><img src="assets/01-dr-pritom-ghosh-in-hospital-theatre-scrubs.jpg" alt="Dr. Pritom Ghosh in hospital theatre scrubs" loading="lazy"><span>Clinical portrait <b>01</b></span></button>
+        <button class="gallery-item reveal" data-full="assets/02-spondylolisthesis-surgery-exposure.jpg" data-caption="Supervised exposure during spondylolisthesis spinal surgery"><img src="assets/02-spondylolisthesis-surgery-exposure.jpg" alt="Supervised spinal surgery theatre exposure" loading="lazy"><span>Spine surgery <b>02</b></span></button>
+        <button class="gallery-item reveal" data-full="assets/03-laparoscopic-cholecystectomy-suite.jpg" data-caption="Laparoscopic cholecystectomy operating theatre"><img src="assets/03-laparoscopic-cholecystectomy-suite.jpg" alt="Laparoscopic cholecystectomy suite" loading="lazy"><span>Laparoscopic OT <b>03</b></span></button>
+        <button class="gallery-item gallery-wide reveal" data-full="assets/04-ot-intern-colleagues.jpg" data-caption="Medical intern colleagues in surgical scrubs"><img src="assets/04-ot-intern-colleagues.jpg" alt="Medical interns in surgical scrubs" loading="lazy"><span>Intern cohort <b>04</b></span></button>
+        <button class="gallery-item reveal" data-full="assets/05-laparoscopic-monitor.jpg" data-caption="Intraoperative laparoscopic monitor view"><img src="assets/05-laparoscopic-monitor.jpg" alt="Laparoscopic monitor" loading="lazy"><span>Intraoperative view <b>05</b></span></button>
+        <button class="gallery-item gallery-tall reveal" data-full="assets/06-savar-research-fieldwork.jpg" data-caption="Field research and seminar presentation in Savar"><img src="assets/06-savar-research-fieldwork.jpg" alt="Savar research fieldwork" loading="lazy"><span>Field research <b>06</b></span></button>
+        <button class="gallery-item reveal" data-full="assets/07-thesis-book.jpg" data-caption="Community medicine research thesis"><img src="assets/07-thesis-book.jpg" alt="Research thesis book" loading="lazy"><span>Thesis volume <b>07</b></span></button>
+        <button class="gallery-item reveal" data-full="assets/08-title-page.jpg" data-caption="Research title page"><img src="assets/08-title-page.jpg" alt="Research title page" loading="lazy"><span>Study title <b>08</b></span></button>
+        <button class="gallery-item reveal" data-full="assets/09-abstract-page.jpg" data-caption="Research abstract"><img src="assets/09-abstract-page.jpg" alt="Research abstract page" loading="lazy"><span>Abstract <b>09</b></span></button>
+        <button class="gallery-item reveal" data-full="assets/10-acknowledgements.jpg" data-caption="Research acknowledgements"><img src="assets/10-acknowledgements.jpg" alt="Research acknowledgements page" loading="lazy"><span>Acknowledgements <b>10</b></span></button>
+      </div>
+    </section>
+
     <section class="section contact" id="contact">
-      <div class="contact-card reveal">
-        <p class="eyebrow">Professional correspondence</p>
-        <h2>Let’s start a meaningful conversation.</h2>
-        <p>Open to clinical inquiries, academic collaboration, research discussions, and professional opportunities.</p>
-        <div class="contact-actions"><a class="button button-light" href="mailto:pritom.g19766@gmail.com">Send an email <span>↗</span></a><a class="button button-outline" href="https://wa.me/8801715675352" target="_blank" rel="noopener">WhatsApp <span>↗</span></a></div>
+      <div class="contact-card reveal medical-cross-bg">
+        <div class="contact-grid">
+          <div><p class="eyebrow">Professional correspondence</p><h2>Let’s start a meaningful conversation.</h2><p>Open to clinical inquiries, academic collaboration, research discussions, and professional opportunities.</p><div class="contact-actions"><a class="button button-light" href="mailto:pritom.g19766@gmail.com">Send an email <span>↗</span></a><a class="button button-outline" href="https://wa.me/8801715675352" target="_blank" rel="noopener">WhatsApp <span>↗</span></a></div></div>
+          <form class="message-form" id="message-form">
+            <div class="form-kicker">Direct message</div><h3>Write to Dr. Pritom</h3>
+            <label>Your name<input id="sender-name" type="text" autocomplete="name" placeholder="Your full name" required></label>
+            <label>Subject<select id="message-subject"><option>Clinical inquiry</option><option>Academic collaboration</option><option>Research discussion</option><option>Professional opportunity</option></select></label>
+            <label>Message<textarea id="message-body" rows="4" placeholder="Write your message..." required></textarea></label>
+            <button class="button message-submit" type="submit">Continue on WhatsApp <span>↗</span></button>
+          </form>
+        </div>
         <div class="contact-details"><a href="tel:+8801706300013"><small>PHONE</small>+880 1706-300013</a><a href="mailto:pritom.g19766@gmail.com"><small>EMAIL</small>pritom.g19766@gmail.com</a><div><small>HOSPITAL</small>Shaheed Monsur Ali Medical College & Hospital, Uttara, Dhaka</div></div>
       </div>
     </section>
   </main>
 
-  <footer><a class="brand footer-brand" href="#top"><span class="brand-mark">PG</span><span>Dr. Pritom Ghosh<small>MBBS (DU)</small></span></a><p>© 2026 · Medical portfolio</p><a href="#top">Back to top ↑</a></footer>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" hidden><button class="lightbox-close" id="lightbox-close" aria-label="Close image preview">×</button><img id="lightbox-image" src="" alt=""><p id="lightbox-caption"></p></div>
+  <footer><a class="brand footer-brand" href="#top"><span class="brand-mark">PG</span><span>Dr. Pritom Ghosh<small>MBBS (DU)</small></span></a><p>© 2026 · Medical portfolio<br><small class="maker-mark">Designed & developed by <a href="https://mshlikhon.github.io" target="_blank" rel="noopener">MSH Likhon · mshlikhon.github.io ↗</a></small></p><a href="#top">Back to top ↑</a></footer>
 </body>
 </html>
