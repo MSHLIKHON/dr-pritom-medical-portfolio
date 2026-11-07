@@ -1,0 +1,10 @@
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;filter:saturate(.8) contrast(1.03)}
+.hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(4,35,33,.58));pointer-events:none;z-index:1}
+.hero-visual>*:not(.hero-photo){z-index:2}.orbit{z-index:1!important}
+.experience-card{grid-template-columns:38px 132px 1fr 220px}
+.case-photo{width:132px;height:164px;object-fit:cover;object-position:center;border-radius:.9rem;filter:saturate(.8);border:1px solid rgba(255,255,255,.15)}
+.research-panel{padding:1rem}.research-photo{width:100%;height:280px;object-fit:cover;object-position:center 25%;border-radius:1rem;filter:saturate(.82)}
+.research-number{padding:1.7rem 1.5rem .2rem}.research-panel hr,.research-panel dl{margin-left:1.5rem;margin-right:1.5rem}
+.note-one{max-width:160px}.note-one strong{line-height:1.25}
+@media(max-width:900px){.experience-card{grid-template-columns:40px 110px 1fr}.case-photo{width:110px;height:140px}.experience-card .card-meta{grid-column:3}}
+@media(max-width:600px){.experience-card{grid-template-columns:28px 1fr}.case-photo{grid-column:2;width:100%;height:240px}.experience-card>div:nth-of-type(2){grid-column:2}.experience-card .card-meta{grid-column:2}.research-photo{height:230px}}
